@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+    <style>
+        table, th, td {
+            justify-content: center;
+            border: 1px solid black;
+        }
+    </style>
+
+    <table style="width: 50%">
+    <tr>
+        <th>id</th>
+        <th>name</th>
+        <th>car</th>
+        <th>phoneNumbers</th>
+    </tr>
+    {{#phoneBookEntries}}
+    <tr>
+        <td>{{id}}</td>
+        <td>
+            <a href="http://localhost:8086/pb/phonebook/{{id}}">
+                <button>{{name}}</button>
+            </a>
+        </td>
+        <td>{{email}}</td>
+        <td>{{phoneNumbers}}</td>
+    </tr>
+    {{/phoneBookEntries}}
+    </table>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <style>
+        table, th, td {
+            justify-content: center;
+            border: 1px solid black;
+        }
+    </style>
+
+    {{#phoneBookEntry}}
+    <a href="http://localhost:8086/pb/phonebook/{{id}}/edit">
+        <button>EDIT</button>
+    </a>
+
+    {{/phoneBookEntry}}
+
+    {{#phoneBookEntry}}
+    <div>
+        <p>Id: {{id}}</p>
+        <p>Name: {{name}}</p>
+        <p>Email: {{email}}</p>
+
+        <button>DELETE</button>
+
+        <table style="width: 50%">
+            <tr>
+                <th>phoneNumbers</th>
+            </tr>
+        {{#phoneNumbersById}}
+        <tr>
+            <td>{{.}}</td>
+        </tr>
+        {{/phoneNumbersById}}
+        </table>
+
+    </div>
+    {{/phoneBookEntry}}
+
+    <a href="http://localhost:8086/pb/phonebook">
+        <button>BACK</button>
+    </a>
+</body>
+</html>

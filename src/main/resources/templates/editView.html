@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <style>
+        table, th, td {
+            justify-content: center;
+            border: 1px solid black;
+        }
+    </style>
+
+    <h1>The input element</h1>
+
+    <form action="/">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    {{#phoneBookEntry}}
+    <a href="http://localhost:8086/pb/phonebook/{{id}}">
+        <button>BACK</button>
+    </a>
+    {{/phoneBookEntry}}
+</body>
+</html>
